@@ -1,0 +1,31 @@
+ class Solution:
+    def smallestnum (self,N):
+        # code here 
+        pro=list(N)
+        pro=sorted(pro)
+        sol=0
+        for i in range(len(pro)):
+            if(pro[i]!='0'):
+                    sol=pro.pop(i)
+                    break
+        st=str(sol)+"".join(pro)
+        return int(st)
+        
+
+
+
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+
+if _name_ == '_main_': 
+    t = int (input ())
+    for _ in range (t):
+        N = input()
+        ob = Solution()
+        ans = ob.smallestnum(N)
+        print(ans)
+
+# } Driver Code Ends
